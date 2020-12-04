@@ -1,0 +1,735 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Extracto Patagonia Bingo</title>
+    <link rel="stylesheet" href="http://sgta.ijan-neuquen.com/css/bootstrap.min.css">
+    <link href="http://sgta.ijan-neuquen.com/css/fonts.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        #section-telebingo .bg-ptb {
+            background-image: url("http://sgta.ijan-neuquen.com/img/extractos/resources/telebingo/bg_ptb.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* border-radius: 30px; */
+            background-position: top;
+    
+        }
+    
+        #section-telebingo .extracto-header {
+            color: #000;            
+            margin: 25px;
+        }
+    
+        #section-telebingo .extracto-header .title-header {
+            font-size: 1.25em;
+        }
+    
+        #section-telebingo .extracto-header .header-strong {
+            font-family: 'Oswald-SemiBold';
+            font-size: 1.7em;
+        }
+    
+        #section-telebingo .logo-imputacion {
+            max-height: 150px;
+        }
+    
+        #section-telebingo .extracto-body {
+            background-color: #fff;
+            border-radius: 30px;
+            /*line-height: 1;*/
+            margin: 10px;
+        }
+    
+        #section-telebingo .extracto-premios .strong {
+            color: #000;
+            font-family: 'RobotoCondensed-Bold';
+        }
+    
+        #section-telebingo .extracto-footer {
+            color: #000;
+            /*background-color: #ffe896;*/
+            font-size: 2em;
+        }
+    
+        #section-telebingo .extracto-footer .title {
+            font-family: 'RobotoCondensed-Regular';
+        }
+    
+        #section-telebingo .extracto-footer .strong {
+            font-family: 'Oswald-SemiBold';
+        }
+    
+        #section-telebingo .extracto-body .title-modalidad {
+            background-color: #0095ca;
+            color: #fff;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 1.5;
+        }
+    
+        #section-telebingo .extracto-body .ronda {
+            font-family: 'RobotoCondensed-Bold';
+            font-size: 2em;
+            color: #666;
+        }
+    
+        #section-telebingo .extracto-body .ronda-sub {
+            color: #01cc60;
+            font-family: RobotoCondensed-Bold;
+            font-size: 1.5em;
+        }
+    
+        #section-telebingo .extracto-body .title-num {
+            font-family: 'RobotoCondensed-Bold';
+            font-size: 1.3em;
+            /*color: #666;*/
+        }
+    
+        #section-telebingo .extracto-body .numero {
+            /*font-size: 1.3em;*/
+            /*color: #666;*/
+            /*font-family: 'Oswald-Regular';*/
+            font-size: 1.5em;
+            color: #414042;
+            font-family: 'NeuzeitGroTOT-Reg';
+        }
+
+        body{
+
+            background-color: #ffffff
+        }
+    
+        #section-telebingo .extracto-body .text-row {
+            /*padding: 0.3em;*/
+            vertical-align: top;
+            border-top: none;
+            font-family: 'NeuzeitGroTOT-Reg';
+            color: #414042;
+    
+        }
+    
+        #section-telebingo .extracto-body .title-modalidad > span {
+            text-transform: uppercase;
+        }
+    
+        #section-telebingo.row.extracto-premios.table {
+            color: #000;
+            font-family: 'RobotoCondensed-Bold';
+            margin-top: 20px;
+        }
+    
+        #section-telebingo .extracto-body > .extracto-premio > table thead {
+            background-color: #384e9d;
+            margin: 10px;
+        }
+    
+        #section-telebingo   table th:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+    
+        #section-telebingo   table th {
+            background-color: #384e9d;
+            color: #fff;
+            padding: 10px;
+        }
+    
+        #section-telebingo table th:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+    
+        #section-telebingo  .extracto-body table {
+            background-color: #fff;
+            border-collapse: collapse;
+            border-radius: 1em;
+            overflow: hidden;
+        }
+    
+        #section-telebingo   table td:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+    
+        #section-telebingo table td:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+    
+        #section-telebingo  .table-premios {
+            color: #000;
+            font-family: 'RobotoCondensed-Bold';
+            margin-top: 20px;
+        }
+    
+        #section-telebingo .table-premios .table-header {
+            border-collapse: collapse;
+            border-radius: 1em;
+            overflow: hidden;
+            font-size: 14px;
+            border: 2px solid #c1d15f !important;
+        }
+    
+        #section-telebingo  .border-r {
+            border-right: 1px solid#501cb5;
+            /*margin-top: 5px;*/
+            /*margin-bottom: 5px;*/
+        }
+    
+        #section-telebingo  .border-rr {
+            /*border-right: 5px solid #eeeda4;*/
+            border-right: 1px solid #501cb5;
+            border-collapse: collapse;
+        }
+    
+        #section-telebingo .table-premios .table-body {
+            background-color: #fff;
+            border-collapse: collapse;
+            border-radius: 0 0 1em 1em;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 1em;
+            border-bottom-left-radius: 1em;
+            overflow: hidden;
+            padding-bottom: 10px;
+        }        
+    
+        #section-telebingo .no-data {
+            font-family: 'RobotoCondensed-Bold';
+            font-size: 1.5em;
+            color: #000;
+        }
+    
+        #section-telebingo .position-ronda {
+            left: -50px;
+            position: absolute;
+            top: -20px;
+        }
+    
+        #section-telebingo .box-shadow {
+            padding: 10px;
+            box-shadow: 7px 7px #a08e48;
+            margin-bottom: 15px;
+        }
+    
+        #section-telebingo .col-c {
+            width: 20%;
+        }
+    
+    
+        #section-telebingo  .text-laika {
+            font-family: LaikaPro;
+        }
+    
+        #section-telebingo  .color-laika {
+            color: #501cb5;
+        }
+    
+        #section-telebingo  .text-neuzeit {
+            font-family: NeuzeitGroTOT-Reg;
+        }
+    
+        #section-telebingo  .text-gray {
+            color: #414042;
+        }
+    
+        #section-telebingo   .text-minus {
+            font-size: 0.7em;
+        }
+    
+        #section-telebingo  .text-strong {
+            font-weight: bold;
+        }
+    
+        #section-telebingo  .violet-text {
+    
+            color: #501cb5;
+            text-transform: uppercase;
+        }
+    
+        #section-telebingo  .violet-top-border {
+            border-top: 1px solid #501cb5;
+            border-collapse: collapse;
+        }
+    
+        #section-telebingo  .linea-break {
+            background-color: #582e90;
+            height: 2px;
+            width: 100%;
+    
+        }
+    
+        #section-telebingo  .text-15 {
+            font-size: 1.5em;
+        }
+    
+        #section-telebingo .w-200px {
+            width: 200px;
+        }
+    
+        #section-telebingo .img-left {
+            left: -50px;
+            position: absolute;
+            top: -30px;
+        }
+    
+        #section-telebingo  .header-extras {
+            background-color: #01cc60;
+            border-radius: 30px 30px 0 0;
+        }
+    
+        #section-telebingo  .border-green {
+            border: 1px solid #01cc60;
+            border-radius: 10px;
+            /*font-size: 0.8em;*/
+            /*font-weight: 900;*/
+            background-color: #ffffff;
+        }
+    
+        #section-telebingo  .box-green {
+            background-color: #01cc60;
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 0.8em;
+            border: 1px solid #01cc60;
+        }
+    
+        #section-telebingo  .img-right {
+            right: -50px;
+            position: absolute;
+            top: -15px;
+        }
+    
+        @media (min-width: 320px) and (max-width: 480px) {
+            #section-telebingo .table-premios .table-header {
+                font-size: 0.85em;
+            }
+    
+            #section-telebingo .col-c {
+                width: 20%;
+                font-size: 0.75em;
+            }
+    
+            #section-telebingo .logo-imputacion {
+                width: 20%;
+    
+            }
+        }
+    
+        .cant-extra {
+            background-color: #797F46;
+            color: #fff;
+            border-radius: 4px;
+        }
+    
+        .premio-extra {
+            color: #000;
+            font-family: RobotoCondensed-Bold;
+            font-size: 1.5em;
+        }
+
+        .bordesNumeros
+        {
+            width: 84px;
+            height: 60px;
+            text-align: center;
+        }
+
+        .numeroOculto
+        {
+            display: none;
+        }
+    
+        /*.header-extra {*/
+        /*    border-collapse: collapse;*/
+        /*    border-radius: 1em;*/
+        /*    overflow: hidden;*/
+        /*    font-size: 14px;*/
+        /*    border: 2px solid #c1d15f !important*/
+        /*}*/
+    </style>
+
+    <script  type="text/javascript">
+
+        var refreshIntervalId = null;
+
+        function getExtracto()
+        {
+            var param = window.location.pathname.substring(1).split('/');
+            console.log(param);
+            $.ajax({
+                    url: '../bingo/' + param[0] + '/' + param[1],                                                    
+                    success: function(sorteo) {
+                        
+                        if(sorteo)
+                        {
+                            console.log(sorteo);
+                            $("#sorteo").text(sorteo.sorteo);
+                            $("#ronda").text(sorteo.ronda);
+                            for(var i = 0; i < sorteo.extracto.length; i++)
+                            {
+                                $("#h" + sorteo.extracto[i].numero).css({ 'display' : 'inherit' });
+                            }
+                        }
+                    },
+                    error: function(err) {
+                        console.log(err);
+                        clearInterval(intervalId);
+                    }
+                });   
+        }
+
+        $( document ).ready(function() {
+            intervalId  = setInterval(function() {
+                getExtracto();
+            }, 2000); //2 seconds
+        });
+
+    </script>
+    </head>
+    <body>
+    
+        <section id="section-telebingo" class="extracto-section ">
+            <div class="container">
+               <!-- Sorteos -->                                     
+               <div class="extracto  bg-ptb">
+                  <div class="container-border  ">
+                     <div class="container-extracto ">
+                        <div class="extracto-header mt-3 p-3">
+                           <div class="row">
+                              <div class="col-md-6 col-12">
+                                 <div class="text-center ">
+                                    <img alt="..." data-src="http://sgta.ijan-neuquen.com/img/extractos/resources/telebingo-logo.png" class="lazy img-fluid logo-imputacion loaded" src="http://sgta.ijan-neuquen.com/img/extractos/resources/telebingo-logo.png" data-was-processed="true">
+                                 </div>
+                              </div>
+                              <div class="col-md-6 col-12 my-auto">
+                                 <div class="row row-header ">
+                                    <div class="col-md-12 col-12 title-header">SORTEO Nº: <span id="sorteo" style="font-weight: bold;">152</span>
+                                    </div>
+                                 </div>
+                                 <div class="row row-header ">
+                                    <div class="col-md-12 col-12 title-header">FECHA DE SORTEO: <span id="sorteo" style="font-weight: bold;">06/04/1985</span></div>
+                                 </div>                       
+                                 <div class="row row-header ">
+                                    <div class="col-md-12 col-12 title-header">RONDA: <span id="sorteo" style="font-weight: bold;">1</span></div>
+                                 </div>         
+                              </div>
+                           </div>
+                        </div>
+                        <div class="pt-5">
+                           <div class="row mt-5">
+                              <div class="col-md-9 col-12 mx-auto  extracto-body ">
+                                 <div class="row" style="height: 600px;width: 760px;margin-left: 40px;">
+                                    <div class="row" >                                   
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h1" class="numeroOculto" >01</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h11" class="numeroOculto">11</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h21" class="numeroOculto">21</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h31" class="numeroOculto">31</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h41" class="numeroOculto">41</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h51" class="numeroOculto">51</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h61" class="numeroOculto">61</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h71" class="numeroOculto">71</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h81" class="numeroOculto">81</h1>
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="row" >                                   
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h2" class="numeroOculto" >02</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h12" class="numeroOculto">12</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h22" class="numeroOculto">22</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h32" class="numeroOculto">32</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h42" class="numeroOculto">42</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h52" class="numeroOculto">52</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h62" class="numeroOculto">62</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h72" class="numeroOculto">72</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h82" class="numeroOculto">82</h1>
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="row" >                                   
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h3" class="numeroOculto" >03</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h13" class="numeroOculto">13</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h23" class="numeroOculto">23</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h33" class="numeroOculto">33</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h43" class="numeroOculto">43</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h53" class="numeroOculto">53</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h63" class="numeroOculto">63</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h73" class="numeroOculto">73</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h83" class="numeroOculto">83</h1>
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="row" >                                   
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h4" class="numeroOculto" >04</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h14" class="numeroOculto">14</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h24" class="numeroOculto">24</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h34" class="numeroOculto">34</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h44" class="numeroOculto">44</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h54" class="numeroOculto">54</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h64" class="numeroOculto">64</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h74" class="numeroOculto">74</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h84" class="numeroOculto">84</h1>
+                                        </div>                                        
+                                    </div>
+                                 
+                                    <div class="row" >                                   
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h5" class="numeroOculto" >05</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h15" class="numeroOculto">15</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h25" class="numeroOculto">25</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h35" class="numeroOculto">35</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h45" class="numeroOculto">45</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h55" class="numeroOculto">55</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h65" class="numeroOculto">65</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h75" class="numeroOculto">75</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h85" class="numeroOculto">85</h1>
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="row" >                                   
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h6" class="numeroOculto" >06</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h16" class="numeroOculto">16</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h26" class="numeroOculto">26</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h36" class="numeroOculto">36</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h46" class="numeroOculto">46</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h56" class="numeroOculto">56</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h66" class="numeroOculto">66</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h76" class="numeroOculto">76</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h86" class="numeroOculto">86</h1>
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="row" >                                   
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h7" class="numeroOculto" >07</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h17" class="numeroOculto">17</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h27" class="numeroOculto">27</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h37" class="numeroOculto">37</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h47" class="numeroOculto">47</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h57" class="numeroOculto">57</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h67" class="numeroOculto">67</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h77" class="numeroOculto">77</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h87" class="numeroOculto">87</h1>
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="row" >                                   
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h8" class="numeroOculto" >08</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h18" class="numeroOculto">18</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h28" class="numeroOculto">28</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h38" class="numeroOculto">38</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h48" class="numeroOculto">48</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h58" class="numeroOculto">58</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h68" class="numeroOculto">68</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h78" class="numeroOculto">78</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h88" class="numeroOculto">88</h1>
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="row" >                                   
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h9" class="numeroOculto" >09</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h19" class="numeroOculto">19</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h29" class="numeroOculto">29</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h39" class="numeroOculto">39</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h49" class="numeroOculto">49</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h59" class="numeroOculto">59</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h69" class="numeroOculto">69</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h79" class="numeroOculto">79</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h89" class="numeroOculto">89</h1>
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="row" >                                   
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h10" class="numeroOculto" >10</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h20" class="numeroOculto">20</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h30" class="numeroOculto">30</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h40" class="numeroOculto">40</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h50" class="numeroOculto">50</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h60" class="numeroOculto">60</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h70" class="numeroOculto">70</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h80" class="numeroOculto">80</h1>
+                                        </div>
+                                        <div class="bordesNumeros border border-primary" >
+                                            <h1 id="h90" class="numeroOculto">90</h1>
+                                        </div>                                        
+                                    </div>
+
+                                 </div>                                 
+                              </div>
+                           </div>
+                        </div>                 
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+    
+    </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "bingo.api",
+  "version": "1.0.0",
+  "description": "Api de Bingo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Bingo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "moment": "^2.29.1",
+    "mssql": "^6.2.1",
+    "mysql": "^2.18.1"
+  }
+}
